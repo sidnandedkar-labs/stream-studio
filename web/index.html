@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stream Studio — watch inference arrive</title><link rel="stylesheet" href="/style.css"></head>
+<body><main>
+<header><div><span class="eyebrow">INFERENCE EXPERIMENTS / 02</span><h1>Stream Studio<span>.</span></h1>
+<p>Watch the answer arrive. Understand the wait.</p></div><span id="mode" class="badge">Connecting…</span></header>
+<section class="metrics" aria-label="Stream measurements">
+<article><span>First output</span><strong id="first">—</strong><small>Includes reasoning deltas</small></article>
+<article><span>Total time</span><strong id="elapsed">—</strong><small>Request to complete stream</small></article>
+<article><span>End-to-end speed</span><strong id="speed">—</strong><small>Provider tokens / total seconds</small></article>
+<article><span>Answer characters</span><strong id="chars">0</strong><small>Characters are not tokens</small></article>
+</section>
+<section class="workspace"><div class="section-head"><span id="model">Model</span><div><button id="export" type="button">Export chat</button><button id="clear" type="button">New chat</button></div></div>
+<div id="chat" role="log" aria-live="polite"><div class="empty">A front-row seat to streaming inference.<br><small>Start with a question below.</small></div></div>
+<form id="form"><label for="prompt">Your message</label><textarea id="prompt" rows="3" maxlength="12000" required placeholder="Explain speculative decoding with a simple example."></textarea>
+<div class="composer-foot"><span id="status" role="status">Ready</span><div><button id="stop" type="button" disabled>Stop</button><button id="send" type="submit" class="primary">Send ↗</button></div></div></form></section>
+<footer>Local prototype · Keys stay on the Python server · Export includes your conversation · Demo output is synthetic</footer>
+</main><script src="/app.js" defer></script></body></html>
